@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (c) 2026 Hugo Morago Martín
+
 DIR_COLOR=$(tput setaf 4)
 FILE_COLOR=$(tput setaf 7)
 

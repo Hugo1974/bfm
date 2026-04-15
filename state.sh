@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (c) 2026 Hugo Morago Martín
+
 CURRENT_DIR="$PWD"
 SELECTED_INDEX=0
 FILES=()
