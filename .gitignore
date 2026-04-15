@@ -1,1 +1,10 @@
 add_spdx.sh
+# logs
+filebrowser.log
+
+# temp files
+*.tmp
+*.swp
+
+# system
+.DS_Store
