@@ -99,6 +99,9 @@ toggle_select() {
   echo "SEL: ${MULTI_SELECTION[*]}" >&2
 }
 
+get_current_path() {
+  echo "$CURRENT_DIR/${FILES[$SELECTED_INDEX]}"
+}
 # Handle keyboard input for navigation and actions
 handle_input() {
   local key
@@ -149,6 +152,17 @@ handle_input() {
   else
     # Handle regular key presses
     case "$key" in
+    "")
+      local full_path
+      full_path="$(get_current_path)"
+
+      if [[ -d "$full_path" ]]; then
+        enter_dir
+      else
+        open_file "$full_path"
+        echo "$full_path" >"./path"
+      fi
+      ;;
     $' ') toggle_select ;;  # Space
     "y") yank_copy ;;       # Y - copy to clipboard
     "p") paste_copy ;;      # P - paste (copy)
