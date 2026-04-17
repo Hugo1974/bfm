@@ -4,7 +4,7 @@
 #
 
 launch_audio_player() {
-  mpv --no-video $1 2>&1
+  mpv --no-video "$1" 2>&1
 }
 command -v nvim >/dev/null && TEXT_EDITOR="nvim" || TEXT_EDITOR="nano"
 IMAGE_VIEWER="viu"
